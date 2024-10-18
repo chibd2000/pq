@@ -2041,8 +2041,9 @@ func parseEnviron(env []string) (out map[string]string) {
 			accrue("password")
 		case "PGPASSFILE":
 			accrue("passfile")
-		case "PGSERVICE", "PGSERVICEFILE", "PGREALM":
-			unsupported()
+		//case "PGSERVICE", "PGSERVICEFILE", "PGREALM":
+		//	unsupported()
+		// fix: The issue of error caused by the default setting of the pgservicefile environment variable in the vCenter environment
 		case "PGOPTIONS":
 			accrue("options")
 		case "PGAPPNAME":
